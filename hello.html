@@ -1,10 +1,54 @@
 <!DOCTYPE html>
 <html>
-<head><title>My webpage!</title></head>
+<head>
+    <title>My webpage!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @media print{
+            .screen_only{display:none;
+            }
+        }
+
+        @media(min-width: 650px){
+            h1::before{content:"Wellcome to the course"}
+        }
+
+        @media(max-width: 649px){
+            h1::before{content:"Wellcome"}
+        }
+    </style>
+</head>
 <body>Local try of merge
 a new line for second branch
 create a repository branch
-<img src="cat.jpg" height="400" width="300"/>
+<!--img src="cat.jpg" height="400" width="300"/!-->
+<div>
+    <input name="name" type="text" placeholder="Name">
+    <input name="password" type="password" placeholder="Password">
+</div>
+<div>
+    Favorit color?
+    <input name="color" type="radio" value="red">Red
+    <input name="color" type="radio" value="blue">Blue
+    <input name="color" type="radio" value="green">Green
+    <input name="color" type="radio" value="yellow">Yellow
+</div>
+<div>
+    <input name="country" list="countries" placeholder="Country">
+    <datalist id="countries">
+        <option value="Armenia">
+        <option value="Spain">
+        <option value="Italy">
+        <option value="Cyprus">
+    </datalist>
+</div>
+<div>
+    <p>this is paragraph</p>
+    <p>this is another paragraph</p>
+    <p class="screen_only">this paragraph wont be print</p>
+    <h1></h1>
+</div>
+
 </body>
 </html>
 
